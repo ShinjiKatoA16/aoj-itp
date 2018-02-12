@@ -4,7 +4,7 @@
 import sys
 
 while True:
-    n = int(sys.stdint.readline())
+    n = int(sys.stdin.readline())
     if n == 0:
         break
 
@@ -13,5 +13,5 @@ while True:
 
     s2 = 0
     for v in score:
-        s2 += (score-ave) ** 2
-    print(s2 ** 0.5)
+        s2 += (v-ave) ** 2
+    print(round((s2 / len(score)) ** 0.5, 6))
