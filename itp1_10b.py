@@ -5,10 +5,10 @@ import sys
 import math
 
 a, b, c = map(float, sys.stdin.readline().split())
-degree = c*math.pi / 180
+radian = c*math.pi / 180
 
-height = abs(b * math.sin(degree))
-pos_x = b * math.cos(degree)
+height = abs(b * math.sin(radian))
+pos_x = b * math.cos(radian)
 edge_x = (height**2 + (pos_x-a)**2) ** 0.5
 
 print(round(a * height / 2, 6))
