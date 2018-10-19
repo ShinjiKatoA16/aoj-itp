@@ -2,12 +2,9 @@
 # -*- coding: utf-8 -*-
 
 import sys
+from string import ascii_lowercase as asc_l, ascii_uppercase as asc_u
+
+table = str.maketrans(asc_l+asc_u, asc_u+asc_l)
 
 s = sys.stdin.readline()
-for c in s:
-    if c.islower():
-        print(c.upper(), end='')
-    elif c.isupper():
-        print(c.lower(), end='')
-    else:
-        print(c, end='')
+print(s.translate(table), end='')
