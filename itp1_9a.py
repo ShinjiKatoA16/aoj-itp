@@ -5,15 +5,12 @@ import sys
 
 w = sys.stdin.readline().strip().lower()
 
-num_w = 0
+words = list()
 
 while True:
-    s_lst = sys.stdin.readline().split()
-    if s_lst[0] == 'END_OF_TEXT':
+    s = sys.stdin.readline().strip()
+    if s == 'END_OF_TEXT':
         break
-    for str_x in s_lst:
-        str_x = str_x.lower()
-        if str_x == w:
-            num_w += 1
+    words.extend(s.lower().split())
 
-print(num_w)
+print(words.count(w))
